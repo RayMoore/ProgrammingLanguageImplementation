@@ -1,0 +1,16 @@
+snick.cmo : snick_parse.cmi snick_lex.cmo
+snick.cmx : snick_parse.cmx snick_lex.cmx
+snick_parse.cmi : snick_ast.cmo
+snick_symbol.cmi : snick_ast.cmo
+snick_lex.cmo : snick_parse.cmi
+snick_lex.cmx : snick_parse.cmx
+snick_parse.cmo : snick_ast.cmo snick_parse.cmi
+snick_parse.cmx : snick_ast.cmx snick_parse.cmi
+snick_symbol.cmo : snick_ast.cmo snick_symbol.cmi
+snick_symbol.cmx : snick_ast.cmx snick_symbol.cmi
+snick_codegen.cmo : snick_symbol.cmi snick_ast.cmo
+snick_codegen.cmx : snick_symbol.cmx snick_ast.cmx
+snick_analyze.cmo : snick_symbol.cmi snick_codegen.cmo snick_ast.cmo
+snick_analyze.cmx : snick_symbol.cmx snick_codegen.cmx snick_ast.cmx
+snick.cmo : snick_parse.cmi snick_lex.cmo
+snick.cmx : snick_parse.cmx snick_lex.cmx
